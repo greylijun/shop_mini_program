@@ -1,31 +1,19 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/list/list"
+    "pages/list/list",
+    "pages/contact/contact",
+    "pages/production/production",
+    "pages/daily/daily",
+    "pages/new/new",
+    "pages/man/man",
+    "pages/bolon/bolon",
+    "pages/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "iceYellow眼镜",
     "navigationBarTextStyle": "black"
-  },
-  "tabBar": {
-    "color": "#a9b7b7",
-    "selectedColor": "#FF3333",
-    "borderStyle": "white",
-    "list": [
-      {
-        "selectedIconPath": "images/home-selected.png",
-        "iconPath": "images/home.png",
-        "pagePath": "pages/index/index",
-        "text": "首页"
-      },
-      {
-        "selectedIconPath": "images/lists.png",
-        "iconPath": "images/lists.png",
-        "pagePath": "pages/list/list",
-        "text": "商品列表"
-      }
-    ]
   }
 }

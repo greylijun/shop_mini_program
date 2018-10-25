@@ -1,0 +1,11 @@
+/* pages/contact/contact.wxss */
+.wechat {
+    width: 100%;
+    height: 243px;
+}
+
+.wechat image {
+    margin-left: 25%;
+    width: 50%;
+    height: 100%;
+}

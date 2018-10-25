@@ -23,7 +23,7 @@ Component({
     },
     methods: {
         changeCurrent(val = this.data.current) {
-            let items = this.getRelationNodes('../radio/index');
+            let items = this.getRelationNodes('../radio/index~');
             const len = items.length;
             if (len > 0) {
                 items.forEach(item => {

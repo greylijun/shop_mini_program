@@ -1,86 +1,108 @@
-const app = getApp();
-const http = require('../../utils/http.js');
-
+// pages/index/index.js
 Page({
+
+    /**
+     * 页面的初始数据
+     */
     data: {
-        imgUrls: [],
-        indicatorDots: true,
-        autoplay: true,
-        interval: 5000,
-        duration: 1000,
-        current: 'like',
-        toView: 'green',
-        scrollTop: 100,
-        scrollLeft: 0,
-        scrollImages: []
-    },
-    //滚动条滚到顶部的时候触发
-    upper: function (e) {
-        console.log(e);
-        console.log(11);
-    },
-    //滚动条滚到底部的时候触发
-    lower: function (e) {
-        console.log(e);
-        console.log(222);
-    },
-    //滚动条滚动后触发
-    scroll: function (e) {
-        console.log(e);
-        console.log(333);
-    },
-    //点击按钮切换到下一个view
-    tap: function (e) {
-        console.log(444);
-        for (var i = 0; i < this.scrollImages.length; ++i) {
-            for (let num = 0; num < this.scrollImages[i].length; ++i) {
-                if (order[i] === this.data.toView) {
-                    this.setData({
-                        toView: order[i + 1]
-                    });
-                    break
-                }
-            }
-        }
-    },
-    //通过设置滚动条位置实现画面滚动
-    tapMove: function (e) {
-        this.setData({
-            scrollLeft: this.data.scrollLeft + 10
-        })
-    },
-    onLoad: function () {
-        this.loadSliderData();
-        this.loadScrollData();
-    },
-    // 载入slider数据
-    loadSliderData: function (e) {
-        let vm = this;
-        http.get({
-            url: '/home/slider',
-            success: function (res) {
-                vm.setData({
-                    imgUrls: res
-                })
+        type: [
+            {
+                class: 'production',
+                title: '产品展示',
+                url: '../production/production',
             },
-            fail: function (res) {
-                console.log(res.message);
-            }
-        })
-    },
-    // 载入scroll数据
-    loadScrollData: function (e) {
-        let vm = this;
-        http.get({
-            url: '/home/type_scroll',
-            success: function (res) {
-                vm.setData({
-                    scrollImages: res
-                })
+            {
+                class: 'daily',
+                title: '今日特惠',
+                url: '../daily/daily'
             },
-            fail: function (res) {
-                console.log(res.message);
-            }
-        })
+            {
+                class: 'new',
+                title: '爆款新品',
+                url: '../new/new'
+            },
+            {
+                class: 'man',
+                title: '型男必备',
+                url: '../man/man'
+            },
+            {
+                class: 'bolon',
+                title: '暴龙专场',
+                url: '../bolon/bolon'
+            },
+            {
+                class: 'contact',
+                title: '联系我们',
+                url: '../contact/contact'
+            },
+        ]
+    },
+    // 页面跳转
+    bindNavClick: function (e) {
+        let target = this.data.type[e.currentTarget.dataset.key];
+        wx.navigateTo({
+            url: target.url
+        });
+        wx.setNavigationBarTitle({
+            title: target.title
+        });
+    },
+
+
+    /**
+     * 生命周期函数--监听页面加载
+     */
+    onLoad: function (options) {
+
+    },
+
+    /**
+     * 生命周期函数--监听页面初次渲染完成
+     */
+    onReady: function () {
+
+    },
+
+    /**
+     * 生命周期函数--监听页面显示
+     */
+    onShow: function () {
+
+    },
+
+    /**
+     * 生命周期函数--监听页面隐藏
+     */
+    onHide: function () {
+
+    },
+
+    /**
+     * 生命周期函数--监听页面卸载
+     */
+    onUnload: function () {
+
+    },
+
+    /**
+     * 页面相关事件处理函数--监听用户下拉动作
+     */
+    onPullDownRefresh: function () {
+
+    },
+
+    /**
+     * 页面上拉触底事件的处理函数
+     */
+    onReachBottom: function () {
+
+    },
+
+    /**
+     * 用户点击右上角分享
+     */
+    onShareAppMessage: function () {
+
     }
-});
+})

@@ -28,7 +28,7 @@ Component({
     },
     methods : {
         _updateScrollTopChange(){
-            const stickies = this.getRelationNodes('../sticky-item/index');
+            const stickies = this.getRelationNodes('../sticky-item/index~');
             if( stickies.length > 0 ){
                 stickies.forEach((item) => {
                     if( item ){
@@ -38,7 +38,7 @@ Component({
             }
         },
         _updateDataChange( ){
-            const stickies = this.getRelationNodes('../sticky-item/index');
+            const stickies = this.getRelationNodes('../sticky-item/index~');
             if( stickies.length > 0 ){
                 if( this.data.timer ){
                     clearTimeout( this.data.timer )

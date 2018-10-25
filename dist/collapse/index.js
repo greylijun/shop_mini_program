@@ -13,7 +13,7 @@ Component({
     methods: {
         clickfn(e) {
             const params = e.detail;
-            const allList = this.getRelationNodes('../collapse-item/index');
+            const allList = this.getRelationNodes('../collapse-item/index~');
             allList.forEach((item) => {
                 if (params.name === item.data.name) {
                     item.setData({

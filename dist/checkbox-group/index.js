@@ -23,7 +23,7 @@ Component({
     },
     methods: {
         changeCurrent(val = this.data.current) {
-            let items = this.getRelationNodes('../checkbox/index');
+            let items = this.getRelationNodes('../checkbox/index~');
             const len = items.length;
             if (len > 0) {
                 items.forEach(item => {

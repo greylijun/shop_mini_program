@@ -1,0 +1,9 @@
+<!--pages/detail/detail.wxml-->
+<view>
+    <view class="main">
+
+    </view>
+    <view class="imageList">
+        <image wx:for="{{imageLists}}" wx:key="item" src="{{item.url}}"></image>
+    </view>
+</view>

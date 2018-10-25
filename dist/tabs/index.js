@@ -38,7 +38,7 @@ Component({
 
     methods: {
         changeCurrent (val = this.data.current) {
-            let items = this.getRelationNodes('../tab/index');
+            let items = this.getRelationNodes('../tab/index~');
             const len = items.length;
 
             if (len > 0) {

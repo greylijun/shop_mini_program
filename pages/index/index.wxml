@@ -1,28 +1,13 @@
-<view>
-    <swiper indicator-dots="{{indicatorDots}}"
-            autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height:250px;">
-        <block wx:key="{{item}}" wx:for="{{imgUrls}}">
-            <swiper-item>
-                <navigator url="" hover-class="navigator-hover">
-                    <image src="{{item.url}}" class="slide-image"/>
-                </navigator>
-            </swiper-item>
-        </block>
-    </swiper>
-    <i-tab-bar current="{{ current }}" bindchange="handleChange">
-        <i-tab-bar-item key="group" icon="group" current-icon="group" title="最新爆款"></i-tab-bar-item>
-        <i-tab-bar-item key="praise" icon="praise" current-icon="praise" title="人气款"></i-tab-bar-item>
-        <i-tab-bar-item key="like" icon="like" current-icon="like" title="网红同款"></i-tab-bar-item>
-        <i-tab-bar-item key="mine" icon="mine" current-icon="mine" title="型男必备"></i-tab-bar-item>
-    </i-tab-bar>
-
-    <view wx:key="{{item}}" wx:for="{{scrollImages}}" wx:for-index="index">
-        <view>{{index}}</view>
-        <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%" bindscrolltoupper="upper"
-                     bindscrolltolower="lower" bindscroll="scroll" scroll-left="{{scrollLeft}}">
-            <view wx:for="{{item}}" wx:key="*this" wx:for-index="item_index">
-                <image id="{{item_index}}" src="{{item.url}}" class="scroll-view-item_H"/>
-            </view>
-        </scroll-view>
+<!--pages/index/index.wxml-->
+<view class="backgd">
+    <view class="{{item.class}}" wx:for="{{type}}" wx:key="item" wx:for-index="index" data-key="{{index}}"
+          bindtap="bindNavClick">
+        {{item.title}}
     </view>
+    <!--<view class="production" bindtap="clickProduction">产品展示</view>-->
+    <!--<view class="daily" bindtap="clickDaily">今日特惠</view>-->
+    <!--<view class="new" bindtap="clickNew">爆款新品</view>-->
+    <!--<view class="man" bindtap="clickMan">型男必备</view>-->
+    <!--<view class="bolon" bindtap="clickBolon">暴龙专场</view>-->
+    <!--<view class="contact" bindtap="clickContact">联系我们</view>-->
 </view>

@@ -33,7 +33,7 @@ Component({
     },
     methods: {
         _updateDataChange() {
-            let steps = this.getRelationNodes('../step/index');
+            let steps = this.getRelationNodes('../step/index~');
             const len = steps.length;
             if (len > 0) {
                 steps.forEach((step, index) => {

@@ -1,0 +1,79 @@
+.slide-image {
+    width: 100%;
+}
+
+.index_title {
+    margin: 10px;
+    font-weight: bold;
+}
+
+.index_more {
+    margin: 10px;
+    font-size: 14px;
+    color: #AAAAAA;
+}
+
+.index_image {
+    margin: 0 10px 0 10px;
+    height: 120px;
+    font-size: 10px;
+}
+
+.index_image image {
+    width: 100%;
+    height: 100%
+}
+
+.index_image ._price {
+    font-size: 14px;
+    color: #ff0000;
+}
+
+.index_image ._sale {
+    color: #AAAAAA;
+}
+
+.index_image ._title {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    white-space: normal !important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+@font-face {
+    font-family: 'iconfont';  /* project id 879620 */
+    src: url('//at.alicdn.com/t/font_879620_qgugmne40h.eot');
+    src: url('//at.alicdn.com/t/font_879620_qgugmne40h.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_879620_qgugmne40h.woff') format('woff'),
+    url('//at.alicdn.com/t/font_879620_qgugmne40h.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_879620_qgugmne40h.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 20px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bhjaward:before {
+    content: "\e624";
+}
+
+.scroll-view_H {
+    white-space: nowrap;
+}
+
+.scroll-view-item {
+    height: 200px;
+}
+
+.scroll-view-item_H {
+    display: inline-block;
+    width: 100%;
+    height: 200px;
+}

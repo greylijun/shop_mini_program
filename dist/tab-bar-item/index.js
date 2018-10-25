@@ -55,7 +55,7 @@ Component({
             this.setData({ currentColor });
         },
         handleClickItem () {
-            const parent = this.getRelationNodes('../tab-bar/index')[0];
+            const parent = this.getRelationNodes('../tab-bar/index~')[0];
             parent.emitEvent(this.data.key);
         }
     }

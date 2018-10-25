@@ -43,7 +43,7 @@ Component({
             this.setData({ scroll });
         },
         handleClickItem () {
-            const parent = this.getRelationNodes('../tabs/index')[0];
+            const parent = this.getRelationNodes('../tabs/index~')[0];
             parent.emitEvent(this.data.key);
         }
     }

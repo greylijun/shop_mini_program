@@ -44,7 +44,7 @@ Component({
         checkboxChange() {
             if (this.data.disabled) return;
             const item = { current: !this.data.checked, value: this.data.value };
-            const parent = this.getRelationNodes('../checkbox-group/index')[0];
+            const parent = this.getRelationNodes('../checkbox-group/index~')[0];
             parent ? parent.emitEvent(item) : this.triggerEvent('change', item);
         },
         setPosition() {

@@ -18,7 +18,7 @@ Component({
 
     methods: {
         setGridItemWidth () {
-            const nodes = this.getRelationNodes('../grid-item/index');
+            const nodes = this.getRelationNodes('../grid-item/index~');
 
             // const len = nodes.length;
             // if (len < 3) {

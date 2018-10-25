@@ -37,7 +37,7 @@ Component({
     methods : {
         loop(){},
         _updateDataChange( ){
-            const indexItems = this.getRelationNodes('../index-item/index');
+            const indexItems = this.getRelationNodes('../index~-item/index~');
             const len = indexItems.length;
             const fixedData = this.data.fixedData;
             /*
@@ -77,7 +77,7 @@ Component({
         handlerScroll(event){
             const detail = event.detail;
             const scrollTop = detail.scrollTop;
-            const indexItems = this.getRelationNodes('../index-item/index');
+            const indexItems = this.getRelationNodes('../index~-item/index~');
             indexItems.forEach((item,index)=>{
                 let data = item.data;
                 let offset = data.top + data.height;
@@ -90,7 +90,7 @@ Component({
             })
         },
         getCurrentItem(index){
-            const indexItems = this.getRelationNodes('../index-item/index');
+            const indexItems = this.getRelationNodes('../index~-item/index~');
             let result = {};
             result = indexItems[index].data;
             result.total = indexItems.length;
@@ -146,7 +146,7 @@ Component({
             })
         },
         setTouchStartVal(){
-            const className = '.i-index-fixed';
+            const className = '.i-index~-fixed';
             const query = wx.createSelectorQuery().in(this);
             query.select( className ).boundingClientRect((res)=>{
                 this.setData({
