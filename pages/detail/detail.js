@@ -5,8 +5,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-        imageLists: [],
-
+        detailData: {}
     },
 
     /**
@@ -15,7 +14,7 @@ Page({
     onLoad: function (options) {
         let params = JSON.parse(options.params).data;
         this.setData({
-            imageLists: params.image
+            detailData: params
         });
     },
 

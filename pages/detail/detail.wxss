@@ -1,6 +1,10 @@
 /* pages/detail/detail.wxss */
 .main {
-    height: 200px;
+    height: 210px;
+}
+
+.main .weui-cell__ft {
+    font-size: 14px;
 }
 
 .imageList {
